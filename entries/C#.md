@@ -1,1 +1,0 @@
-This is an amazing language to program some great applications. 

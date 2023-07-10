@@ -19,10 +19,11 @@ def save_entry(title, content):
     content. If an existing entry with the same title already exists,
     it is replaced.
     """
-    filename = f"entries/{title}.md"
+    filename = f"entries/{(title)}.md"
     if default_storage.exists(filename):
         default_storage.delete(filename)
-    default_storage.save(filename, ContentFile("# "+title+"\n"+content))
+    default_storage.save(filename, ContentFile("# "+ title +"\n"+ content)) #added "#" + title + "\n" to add the value of title and to go to the next line. 
+    
 
 
 def get_entry(title):
@@ -35,3 +36,4 @@ def get_entry(title):
         return f.read().decode("utf-8")
     except FileNotFoundError:
         return None
+

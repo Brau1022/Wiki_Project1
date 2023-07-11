@@ -74,7 +74,8 @@ def edit_page (request):
         content = util.get_entry(title)
         return render(request, "encyclopedia/edit.html", {
             "title": title,
-            "content": content
+            "content": content,
+            
         })
     
 def save_edit(request):
@@ -86,7 +87,7 @@ def save_edit(request):
         html_content = conver_md_to_html(title)
         return render(request, "encyclopedia/entry.html", {
             "title":title,
-            "content":html_content      
+            "content":html_content  
           
         })
         
@@ -97,4 +98,5 @@ def randlist(request):
     return render(request,"encyclopedia/entry.html", {
         "title": rand_entry,
         "content": html_content
+     
     })

@@ -23,7 +23,7 @@ def save_entry(title, content):
     if default_storage.exists(filename):
         default_storage.delete(filename)
     default_storage.save(filename, ContentFile("# "+ title +"\n"+ content)) #added "#" + title + "\n" to add the value of title and to go to the next line. 
-    
+   
 
 
 def get_entry(title):
